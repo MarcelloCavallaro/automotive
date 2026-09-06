@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Report Vendite</title>
-
-  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbxaHvNfyrw2muVs9lpx4478xCKolV2Vd_BhRoyrxx1URaCDqO0czG3GTSljHnMMeKbgjA/exec">
-
-  <script>
-    window.location.replace(
-      "https://script.google.com/macros/s/AKfycbxaHvNfyrw2muVs9lpx4478xCKolV2Vd_BhRoyrxx1URaCDqO0czG3GTSljHnMMeKbgjA/exec"
-    );
-  </script>
+  <title>Automotive - Gestione Vendite</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -23,32 +19,106 @@
       font-family: Arial, sans-serif;
       background: #f3f4f6;
       color: #111827;
+      padding: 24px;
     }
 
-    .box {
-      background: white;
-      padding: 32px;
-      border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    .container {
+      width: 100%;
+      max-width: 900px;
       text-align: center;
-      max-width: 420px;
     }
 
-    a {
-      color: #b00020;
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #6b7280;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .big-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      padding: 30px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-size: 28px;
       font-weight: bold;
+      color: white;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .big-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.22);
+    }
+
+    .insert {
+      background: #8FAFC4;
+    }
+
+    .report {
+      background: #b00020;
+    }
+
+    @media (max-width: 700px) {
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .big-button {
+        min-height: 170px;
+        font-size: 24px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <h2>Apertura applicazione...</h2>
-    <p>
-      Se il reindirizzamento non parte automaticamente,
-      <a href="https://script.google.com/macros/s/AKfycbxaHvNfyrw2muVs9lpx4478xCKolV2Vd_BhRoyrxx1URaCDqO0czG3GTSljHnMMeKbgjA/exec">
-        clicca qui
-      </a>.
-    </p>
+
+  <div class="container">
+
+    <h1>Automotive</h1>
+
+    <div class="subtitle">
+      Gestione contratti e report vendite
+    </div>
+
+    <div class="buttons">
+
+      <a
+        class="big-button insert"
+        href="https://script.google.com/macros/s/AKfycbxaHvNfyrw2muVs9lpx4478xCKolV2Vd_BhRoyrxx1URaCDqO0czG3GTSljHnMMeKbgjA/exec"
+      >
+        Inserimento dati
+      </a>
+
+      <a
+        class="big-button report"
+        href="https://script.google.com/macros/s/AKfycbxaHvNfyrw2muVs9lpx4478xCKolV2Vd_BhRoyrxx1URaCDqO0czG3GTSljHnMMeKbgjA/exec?page=report"
+      >
+        Report
+      </a>
+
+    </div>
+
   </div>
+
 </body>
 </html>
